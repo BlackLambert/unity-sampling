@@ -152,13 +152,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 31d436d310cb9ce4892c4a277cfb3557, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _samplesAmount: 25
+  _samplesAmount: 150
   _bounds: {x: 10, y: 10, z: 10}
   _minimalDistance: 1.5
-  _maximalDistance: 2
+  _maximalDistance: 3
   _sampleObject: {fileID: 6292773635095354086, guid: f1bded7f4e1b5184990ee03c7618d2cd, type: 3}
   _connectionObject: {fileID: 7177061470562023560, guid: 8ed731c8bafbbc44fa3ad1b62ff4792c, type: 3}
   _retries: 10
+  _seed: 6
+  _secondsTillSeedIncrease: 2
 --- !u!4 &214029763
 Transform:
   m_ObjectHideFlags: 0
