@@ -10,9 +10,10 @@ namespace SBaier.Sampling.Tests
 		private const int _retries = 50;
 
 		private const float _epsilon = 0.01f;
+		private const int _highAmount = 500;
 		private readonly int[] _testSeeds = new int[] {0, 42, 123, 2, 1024 };
-		private readonly int[] _testSamplesAmount = new int[] {3, 1, 10, 21, 100 };
-		private readonly float[] _testMinDistance = new float[] { 2, 1.2f, 11f, 0, 0.7f };
+		private readonly int[] _testSamplesAmount = new int[] {3, 21, 10, 1, 100 };
+		private readonly float[] _testMinDistance = new float[] { 2, 1.2f, 11f, 2, 25f };
 		private readonly Vector3[] _testBounds = new Vector3[]
 		{
 			new Vector3(10, 20, 5),
@@ -95,7 +96,7 @@ namespace SBaier.Sampling.Tests
         }
 
 		[Test]
-		public void PoissonDiskSampling3D_NegativeAmountThrowsException()
+		public void PoissonDiskSampling3D_Sample_NegativeAmountThrowsException()
 		{
 			for (int i = 0; i < _invalidSamplesAmount.Length; i++)
 			{
@@ -107,7 +108,7 @@ namespace SBaier.Sampling.Tests
 		}
 
 		[Test]
-		public void PoissonDiskSampling3D_NegativeMinDistanceThrowsException()
+		public void PoissonDiskSampling3D_Sample_NegativeMinDistanceThrowsException()
 		{
 			for (int i = 0; i < _invalidMinDistance.Length; i++)
 			{
@@ -119,7 +120,7 @@ namespace SBaier.Sampling.Tests
 		}
 
 		[Test]
-		public void PoissonDiskSampling3D_InvalidBoundsThrowsException()
+		public void PoissonDiskSampling3D_Sample_InvalidBoundsThrowsException()
 		{
 			for (int i = 0; i < _invalidBounds.Length; i++)
 			{
@@ -131,7 +132,7 @@ namespace SBaier.Sampling.Tests
 		}
 
 		[Test]
-		public void PoissonDiskSampling3D_InvalidStartPositionThrowsException()
+		public void PoissonDiskSampling3D_Sample_InvalidStartPositionThrowsException()
 		{
 			for (int i = 0; i < _invalidStartPositions.Length; i++)
 			{
@@ -142,12 +143,24 @@ namespace SBaier.Sampling.Tests
 			}
 		}
 
+		[Test]
+		public void PoissonDiskSampling3D_Sample_UnreachableAmountCausesException()
+		{
+			for (int i = 0; i < _invalidStartPositions.Length; i++)
+			{
+				GivenANewPoissonDiskSampling(i);
+				TestDelegate test = () => WhenSampleIsCalled(CreateParametersWithHighAmount(i));
+				ThenThrowsSamplingException(test);
+				TearDown();
+			}
+		}
+
 		private void GivenANewPoissonDiskSampling(int index)
         {
             _sampling = new PoissonDiskSampling3D(CreateRandom(index), _retries);
-        }
+		}
 
-        private void WhenSampleIsCalled(PoissonDiskSampling3D.Parameters parameters)
+		private void WhenSampleIsCalled(PoissonDiskSampling3D.Parameters parameters)
 		{
 			_samples = _sampling.Sample(parameters);
 		}
@@ -204,6 +217,11 @@ namespace SBaier.Sampling.Tests
 		private void ThenThrowsInvalidStartPositionException(TestDelegate test)
 		{
 			Assert.Throws<PoissonDiskSampling3D.InvalidStartPositionException>(test);
+		}
+
+		private void ThenThrowsSamplingException(TestDelegate test)
+		{
+			Assert.Throws<PoissonDiskSampling3D.SamplingException>(test);
 		}
 
 		[TearDown]
@@ -268,6 +286,16 @@ namespace SBaier.Sampling.Tests
 			float minDistance = _testMinDistance[index];
 			Vector3 bounds = _testBounds[index];
 			Vector3 startPos = _invalidStartPositions[index];
+
+			return new PoissonDiskSampling3D.Parameters(amount, minDistance, bounds, startPos);
+		}
+
+		private PoissonDiskSampling3D.Parameters CreateParametersWithHighAmount(int index)
+		{
+			int amount = _highAmount;
+			float minDistance = _testMinDistance[index];
+			Vector3 bounds = _testBounds[index];
+			Vector3 startPos = _testStartPositions[index];
 
 			return new PoissonDiskSampling3D.Parameters(amount, minDistance, bounds, startPos);
 		}

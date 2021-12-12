@@ -105,7 +105,7 @@ namespace SBaier.Sampling
 		private Vector3 CreateSampleFromOpenList()
 		{
 			if (_openList.Count == 0)
-				throw new InvalidOperationException();
+				throw new SamplingException();
 
 			int randomOpenIndex = _random.Next(_openList.Count);
 			Vector3 openSample = _samples[_openList[randomOpenIndex]];
@@ -184,5 +184,10 @@ namespace SBaier.Sampling
 		public class InvalidMinDistanceException : ArgumentException { }
 		public class InvalidBoundsException : ArgumentException { }
 		public class InvalidStartPositionException : ArgumentException { }
+		public class SamplingException : ArgumentException 
+		{
+			public SamplingException() : base("Sampling failed. Please increase the amount of retries, " +
+				"increase the size of the bounds or decrease the samples amount") { }
+		}
 	}
 }
