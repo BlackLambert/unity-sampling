@@ -19,7 +19,7 @@ MonoBehaviour:
     width: 2560
     height: 1357.3334
   m_ShowMode: 4
-  m_Title: Hierarchy
+  m_Title: Game
   m_RootView: {fileID: 7}
   m_MinSize: {x: 875, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
@@ -39,10 +39,10 @@ MonoBehaviour:
   m_Children: []
   m_Position:
     serializedVersion: 2
-    x: 1290.6666
+    x: 1290
     y: 0
-    width: 664
-    height: 774.6667
+    width: 665
+    height: 774
   m_MinSize: {x: 202, y: 221}
   m_MaxSize: {x: 4002, y: 4021}
   m_ActualView: {fileID: 18}
@@ -70,7 +70,7 @@ MonoBehaviour:
     x: 0
     y: 30
     width: 2560
-    height: 1307.3334
+    height: 1307
   m_MinSize: {x: 400, y: 200}
   m_MaxSize: {x: 32384, y: 16192}
   vertical: 0
@@ -90,12 +90,12 @@ MonoBehaviour:
   m_Children: []
   m_Position:
     serializedVersion: 2
-    x: 1954.6666
+    x: 1955
     y: 0
-    width: 605.3334
-    height: 1307.3334
-  m_MinSize: {x: 275, y: 50}
-  m_MaxSize: {x: 4000, y: 4000}
+    width: 605
+    height: 1307
+  m_MinSize: {x: 276, y: 71}
+  m_MaxSize: {x: 4001, y: 4021}
   m_ActualView: {fileID: 15}
   m_Panes:
   - {fileID: 15}
@@ -119,10 +119,10 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 495.33334
-    height: 774.6667
-  m_MinSize: {x: 200, y: 200}
-  m_MaxSize: {x: 4000, y: 4000}
+    width: 495
+    height: 774
+  m_MinSize: {x: 201, y: 221}
+  m_MaxSize: {x: 4001, y: 4021}
   m_ActualView: {fileID: 16}
   m_Panes:
   - {fileID: 16}
@@ -144,9 +144,9 @@ MonoBehaviour:
   m_Position:
     serializedVersion: 2
     x: 0
-    y: 774.6667
-    width: 1954.6666
-    height: 532.6667
+    y: 774
+    width: 1955
+    height: 533
   m_MinSize: {x: 100, y: 100}
   m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 19}
@@ -176,7 +176,7 @@ MonoBehaviour:
     x: 0
     y: 0
     width: 2560
-    height: 1357.3334
+    height: 1357
   m_MinSize: {x: 875, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
   m_UseTopView: 1
@@ -221,7 +221,7 @@ MonoBehaviour:
   m_Position:
     serializedVersion: 2
     x: 0
-    y: 1337.3334
+    y: 1337
     width: 2560
     height: 20
   m_MinSize: {x: 0, y: 0}
@@ -245,12 +245,12 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 1954.6666
-    height: 1307.3334
+    width: 1955
+    height: 1307
   m_MinSize: {x: 300, y: 200}
   m_MaxSize: {x: 24288, y: 16192}
   vertical: 1
-  controlID: 771
+  controlID: 26
 --- !u!114 &11
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -271,12 +271,12 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 1954.6666
-    height: 774.6667
+    width: 1955
+    height: 774
   m_MinSize: {x: 300, y: 100}
   m_MaxSize: {x: 24288, y: 8096}
   vertical: 0
-  controlID: 772
+  controlID: 27
 --- !u!114 &12
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -292,12 +292,12 @@ MonoBehaviour:
   m_Children: []
   m_Position:
     serializedVersion: 2
-    x: 495.33334
+    x: 495
     y: 0
-    width: 795.33325
-    height: 774.6667
-  m_MinSize: {x: 200, y: 200}
-  m_MaxSize: {x: 4000, y: 4000}
+    width: 795
+    height: 774
+  m_MinSize: {x: 202, y: 221}
+  m_MaxSize: {x: 4002, y: 4021}
   m_ActualView: {fileID: 17}
   m_Panes:
   - {fileID: 17}
@@ -323,16 +323,16 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 1954.6667
+    x: 1955.3334
     y: 72.66667
-    width: 604.3334
-    height: 1286.3334
+    width: 604
+    height: 1286
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
     m_LastAppliedPresetName: Default
     m_SaveData: []
   m_Spl:
-    ID: 253
+    ID: 2731
     splitterInitialOffset: 0
     currentActiveSplitter: -1
     realSizes:
@@ -364,7 +364,7 @@ MonoBehaviour:
       name: Unity Sampling
       fullName: Unity Sampling
       resultStatus: 1
-      duration: 0.2835009
+      duration: 0.6882188
       messages: 
       output: 
       stacktrace: 
@@ -380,7 +380,7 @@ MonoBehaviour:
       name: SBaier.Sampling.Tests.dll
       fullName: D:/6_Projekte/unity-sampling/Unity Sampling/Library/ScriptAssemblies/SBaier.Sampling.Tests.dll
       resultStatus: 1
-      duration: 0.2269342
+      duration: 0.4523131
       messages: 
       output: 
       stacktrace: 
@@ -396,7 +396,7 @@ MonoBehaviour:
       name: SBaier
       fullName: SBaier
       resultStatus: 1
-      duration: 0.2172207
+      duration: 0.4193355
       messages: 
       output: 
       stacktrace: 
@@ -412,7 +412,7 @@ MonoBehaviour:
       name: Sampling
       fullName: SBaier.Sampling
       resultStatus: 1
-      duration: 0.2143538
+      duration: 0.4128866
       messages: 
       output: 
       stacktrace: 
@@ -428,7 +428,7 @@ MonoBehaviour:
       name: Tests
       fullName: SBaier.Sampling.Tests
       resultStatus: 1
-      duration: 0.2118123
+      duration: 0.4061869
       messages: 
       output: 
       stacktrace: 
@@ -439,12 +439,113 @@ MonoBehaviour:
       categories: []
       parentId: 1016
       parentUniqueId: SBaier.Sampling.Tests.dll/SBaier/[Sampling][suite]
+    - id: 1006
+      uniqueId: SBaier.Sampling.Tests.dll/SBaier/Sampling/Tests/[SBaier.Sampling.Tests][SBaier.Sampling.Tests.PoissonDiskSampling3DParameterValidatorTests][suite]
+      name: PoissonDiskSampling3DParameterValidatorTests
+      fullName: SBaier.Sampling.Tests.PoissonDiskSampling3DParameterValidatorTests
+      resultStatus: 1
+      duration: 0.0405554
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentId: 1014
+      parentUniqueId: SBaier.Sampling.Tests.dll/SBaier/Sampling/[SBaier.Sampling.Tests][SBaier.Sampling.Tests][suite]
+    - id: 1010
+      uniqueId: SBaier.Sampling.Tests.dll/SBaier/Sampling/Tests/PoissonDiskSampling3DParameterValidatorTests/[SBaier.Sampling.Tests][SBaier.Sampling.Tests.PoissonDiskSampling3DParameterValidatorTests.Validate_InvalidBoundsThrowsException]
+      name: Validate_InvalidBoundsThrowsException
+      fullName: SBaier.Sampling.Tests.PoissonDiskSampling3DParameterValidatorTests.Validate_InvalidBoundsThrowsException
+      resultStatus: 1
+      duration: 0.0160308
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1007
+      parentUniqueId: SBaier.Sampling.Tests.dll/SBaier/Sampling/Tests/[SBaier.Sampling.Tests][SBaier.Sampling.Tests.PoissonDiskSampling3DParameterValidatorTests][suite]
+    - id: 1011
+      uniqueId: SBaier.Sampling.Tests.dll/SBaier/Sampling/Tests/PoissonDiskSampling3DParameterValidatorTests/[SBaier.Sampling.Tests][SBaier.Sampling.Tests.PoissonDiskSampling3DParameterValidatorTests.Validate_InvalidStartPositionThrowsException]
+      name: Validate_InvalidStartPositionThrowsException
+      fullName: SBaier.Sampling.Tests.PoissonDiskSampling3DParameterValidatorTests.Validate_InvalidStartPositionThrowsException
+      resultStatus: 1
+      duration: 0.0009082
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1007
+      parentUniqueId: SBaier.Sampling.Tests.dll/SBaier/Sampling/Tests/[SBaier.Sampling.Tests][SBaier.Sampling.Tests.PoissonDiskSampling3DParameterValidatorTests][suite]
+    - id: 1008
+      uniqueId: SBaier.Sampling.Tests.dll/SBaier/Sampling/Tests/PoissonDiskSampling3DParameterValidatorTests/[SBaier.Sampling.Tests][SBaier.Sampling.Tests.PoissonDiskSampling3DParameterValidatorTests.Validate_NegativeAmountThrowsException]
+      name: Validate_NegativeAmountThrowsException
+      fullName: SBaier.Sampling.Tests.PoissonDiskSampling3DParameterValidatorTests.Validate_NegativeAmountThrowsException
+      resultStatus: 1
+      duration: 0.0008133
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1007
+      parentUniqueId: SBaier.Sampling.Tests.dll/SBaier/Sampling/Tests/[SBaier.Sampling.Tests][SBaier.Sampling.Tests.PoissonDiskSampling3DParameterValidatorTests][suite]
+    - id: 1009
+      uniqueId: SBaier.Sampling.Tests.dll/SBaier/Sampling/Tests/PoissonDiskSampling3DParameterValidatorTests/[SBaier.Sampling.Tests][SBaier.Sampling.Tests.PoissonDiskSampling3DParameterValidatorTests.Validate_NegativeMinDistanceThrowsException]
+      name: Validate_NegativeMinDistanceThrowsException
+      fullName: SBaier.Sampling.Tests.PoissonDiskSampling3DParameterValidatorTests.Validate_NegativeMinDistanceThrowsException
+      resultStatus: 1
+      duration: 0.0005458
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1007
+      parentUniqueId: SBaier.Sampling.Tests.dll/SBaier/Sampling/Tests/[SBaier.Sampling.Tests][SBaier.Sampling.Tests.PoissonDiskSampling3DParameterValidatorTests][suite]
+    - id: 1012
+      uniqueId: SBaier.Sampling.Tests.dll/SBaier/Sampling/Tests/PoissonDiskSampling3DParameterValidatorTests/[SBaier.Sampling.Tests][SBaier.Sampling.Tests.PoissonDiskSampling3DParameterValidatorTests.Validate_NoExceptionOnValidParameters]
+      name: Validate_NoExceptionOnValidParameters
+      fullName: SBaier.Sampling.Tests.PoissonDiskSampling3DParameterValidatorTests.Validate_NoExceptionOnValidParameters
+      resultStatus: 1
+      duration: 0.0012562
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1007
+      parentUniqueId: SBaier.Sampling.Tests.dll/SBaier/Sampling/Tests/[SBaier.Sampling.Tests][SBaier.Sampling.Tests.PoissonDiskSampling3DParameterValidatorTests][suite]
     - id: 1005
       uniqueId: SBaier.Sampling.Tests.dll/SBaier/Sampling/Tests/[SBaier.Sampling.Tests][SBaier.Sampling.Tests.PoissonDiskSampling3DTests][suite]
       name: PoissonDiskSampling3DTests
       fullName: SBaier.Sampling.Tests.PoissonDiskSampling3DTests
       resultStatus: 1
-      duration: 0.2078847
+      duration: 0.3587122
       messages: 
       output: 
       stacktrace: 
@@ -455,12 +556,12 @@ MonoBehaviour:
       categories: []
       parentId: 1017
       parentUniqueId: SBaier.Sampling.Tests.dll/SBaier/Sampling/[SBaier.Sampling.Tests][SBaier.Sampling.Tests][suite]
-    - id: 1011
-      uniqueId: SBaier.Sampling.Tests.dll/SBaier/Sampling/Tests/PoissonDiskSampling3DTests/[SBaier.Sampling.Tests][SBaier.Sampling.Tests.PoissonDiskSampling3DTests.PoissonDiskSampling3D_Sample_InvalidBoundsThrowsException]
-      name: PoissonDiskSampling3D_Sample_InvalidBoundsThrowsException
-      fullName: SBaier.Sampling.Tests.PoissonDiskSampling3DTests.PoissonDiskSampling3D_Sample_InvalidBoundsThrowsException
+    - id: 1002
+      uniqueId: SBaier.Sampling.Tests.dll/SBaier/Sampling/Tests/PoissonDiskSampling3DTests/[SBaier.Sampling.Tests][SBaier.Sampling.Tests.PoissonDiskSampling3DTests.Sample_ResultHasExpectedAmountOfSamples]
+      name: Sample_ResultHasExpectedAmountOfSamples
+      fullName: SBaier.Sampling.Tests.PoissonDiskSampling3DTests.Sample_ResultHasExpectedAmountOfSamples
       resultStatus: 1
-      duration: 0.0163193
+      duration: 0.1928769
       messages: 
       output: 
       stacktrace: 
@@ -470,14 +571,14 @@ MonoBehaviour:
       isSuite: 0
       categories:
       - Uncategorized
-      parentId: 1005
+      parentId: 1001
       parentUniqueId: SBaier.Sampling.Tests.dll/SBaier/Sampling/Tests/[SBaier.Sampling.Tests][SBaier.Sampling.Tests.PoissonDiskSampling3DTests][suite]
-    - id: 1012
-      uniqueId: SBaier.Sampling.Tests.dll/SBaier/Sampling/Tests/PoissonDiskSampling3DTests/[SBaier.Sampling.Tests][SBaier.Sampling.Tests.PoissonDiskSampling3DTests.PoissonDiskSampling3D_Sample_InvalidStartPositionThrowsException]
-      name: PoissonDiskSampling3D_Sample_InvalidStartPositionThrowsException
-      fullName: SBaier.Sampling.Tests.PoissonDiskSampling3DTests.PoissonDiskSampling3D_Sample_InvalidStartPositionThrowsException
+    - id: 1004
+      uniqueId: SBaier.Sampling.Tests.dll/SBaier/Sampling/Tests/PoissonDiskSampling3DTests/[SBaier.Sampling.Tests][SBaier.Sampling.Tests.PoissonDiskSampling3DTests.Sample_SamplesAreInBounds]
+      name: Sample_SamplesAreInBounds
+      fullName: SBaier.Sampling.Tests.PoissonDiskSampling3DTests.Sample_SamplesAreInBounds
       resultStatus: 1
-      duration: 0.0011205
+      duration: 0.0163075
       messages: 
       output: 
       stacktrace: 
@@ -487,14 +588,14 @@ MonoBehaviour:
       isSuite: 0
       categories:
       - Uncategorized
-      parentId: 1005
+      parentId: 1001
       parentUniqueId: SBaier.Sampling.Tests.dll/SBaier/Sampling/Tests/[SBaier.Sampling.Tests][SBaier.Sampling.Tests.PoissonDiskSampling3DTests][suite]
-    - id: 1009
-      uniqueId: SBaier.Sampling.Tests.dll/SBaier/Sampling/Tests/PoissonDiskSampling3DTests/[SBaier.Sampling.Tests][SBaier.Sampling.Tests.PoissonDiskSampling3DTests.PoissonDiskSampling3D_Sample_NegativeAmountThrowsException]
-      name: PoissonDiskSampling3D_Sample_NegativeAmountThrowsException
-      fullName: SBaier.Sampling.Tests.PoissonDiskSampling3DTests.PoissonDiskSampling3D_Sample_NegativeAmountThrowsException
+    - id: 1003
+      uniqueId: SBaier.Sampling.Tests.dll/SBaier/Sampling/Tests/PoissonDiskSampling3DTests/[SBaier.Sampling.Tests][SBaier.Sampling.Tests.PoissonDiskSampling3DTests.Sample_SamplesHaveMinimalSpacing]
+      name: Sample_SamplesHaveMinimalSpacing
+      fullName: SBaier.Sampling.Tests.PoissonDiskSampling3DTests.Sample_SamplesHaveMinimalSpacing
       resultStatus: 1
-      duration: 0.0010422
+      duration: 0.0803644
       messages: 
       output: 
       stacktrace: 
@@ -504,14 +605,14 @@ MonoBehaviour:
       isSuite: 0
       categories:
       - Uncategorized
-      parentId: 1005
+      parentId: 1001
       parentUniqueId: SBaier.Sampling.Tests.dll/SBaier/Sampling/Tests/[SBaier.Sampling.Tests][SBaier.Sampling.Tests.PoissonDiskSampling3DTests][suite]
-    - id: 1010
-      uniqueId: SBaier.Sampling.Tests.dll/SBaier/Sampling/Tests/PoissonDiskSampling3DTests/[SBaier.Sampling.Tests][SBaier.Sampling.Tests.PoissonDiskSampling3DTests.PoissonDiskSampling3D_Sample_NegativeMinDistanceThrowsException]
-      name: PoissonDiskSampling3D_Sample_NegativeMinDistanceThrowsException
-      fullName: SBaier.Sampling.Tests.PoissonDiskSampling3DTests.PoissonDiskSampling3D_Sample_NegativeMinDistanceThrowsException
+    - id: 1005
+      uniqueId: SBaier.Sampling.Tests.dll/SBaier/Sampling/Tests/PoissonDiskSampling3DTests/[SBaier.Sampling.Tests][SBaier.Sampling.Tests.PoissonDiskSampling3DTests.Sample_UnreachableAmountCausesException]
+      name: Sample_UnreachableAmountCausesException
+      fullName: SBaier.Sampling.Tests.PoissonDiskSampling3DTests.Sample_UnreachableAmountCausesException
       resultStatus: 1
-      duration: 0.0039858
+      duration: 0.0465995
       messages: 
       output: 
       stacktrace: 
@@ -521,14 +622,14 @@ MonoBehaviour:
       isSuite: 0
       categories:
       - Uncategorized
-      parentId: 1005
+      parentId: 1001
       parentUniqueId: SBaier.Sampling.Tests.dll/SBaier/Sampling/Tests/[SBaier.Sampling.Tests][SBaier.Sampling.Tests.PoissonDiskSampling3DTests][suite]
     - id: 1006
-      uniqueId: SBaier.Sampling.Tests.dll/SBaier/Sampling/Tests/PoissonDiskSampling3DTests/[SBaier.Sampling.Tests][SBaier.Sampling.Tests.PoissonDiskSampling3DTests.PoissonDiskSampling3D_Sample_ResultHasExpectedAmountOfSamples]
-      name: PoissonDiskSampling3D_Sample_ResultHasExpectedAmountOfSamples
-      fullName: SBaier.Sampling.Tests.PoissonDiskSampling3DTests.PoissonDiskSampling3D_Sample_ResultHasExpectedAmountOfSamples
+      uniqueId: SBaier.Sampling.Tests.dll/SBaier/Sampling/Tests/PoissonDiskSampling3DTests/[SBaier.Sampling.Tests][SBaier.Sampling.Tests.PoissonDiskSampling3DTests.Sample_ValidateIsCalled]
+      name: Sample_ValidateIsCalled
+      fullName: SBaier.Sampling.Tests.PoissonDiskSampling3DTests.Sample_ValidateIsCalled
       resultStatus: 1
-      duration: 0.0088448
+      duration: 0.0071199
       messages: 
       output: 
       stacktrace: 
@@ -538,66 +639,15 @@ MonoBehaviour:
       isSuite: 0
       categories:
       - Uncategorized
-      parentId: 1005
+      parentId: 1001
       parentUniqueId: SBaier.Sampling.Tests.dll/SBaier/Sampling/Tests/[SBaier.Sampling.Tests][SBaier.Sampling.Tests.PoissonDiskSampling3DTests][suite]
-    - id: 1008
-      uniqueId: SBaier.Sampling.Tests.dll/SBaier/Sampling/Tests/PoissonDiskSampling3DTests/[SBaier.Sampling.Tests][SBaier.Sampling.Tests.PoissonDiskSampling3DTests.PoissonDiskSampling3D_Sample_SamplesAreInBounds]
-      name: PoissonDiskSampling3D_Sample_SamplesAreInBounds
-      fullName: SBaier.Sampling.Tests.PoissonDiskSampling3DTests.PoissonDiskSampling3D_Sample_SamplesAreInBounds
-      resultStatus: 1
-      duration: 0.0077091
-      messages: 
-      output: 
-      stacktrace: 
-      notRunnable: 0
-      ignoredOrSkipped: 0
-      description: 
-      isSuite: 0
-      categories:
-      - Uncategorized
-      parentId: 1005
-      parentUniqueId: SBaier.Sampling.Tests.dll/SBaier/Sampling/Tests/[SBaier.Sampling.Tests][SBaier.Sampling.Tests.PoissonDiskSampling3DTests][suite]
-    - id: 1007
-      uniqueId: SBaier.Sampling.Tests.dll/SBaier/Sampling/Tests/PoissonDiskSampling3DTests/[SBaier.Sampling.Tests][SBaier.Sampling.Tests.PoissonDiskSampling3DTests.PoissonDiskSampling3D_Sample_SamplesHaveMinimalSpacing]
-      name: PoissonDiskSampling3D_Sample_SamplesHaveMinimalSpacing
-      fullName: SBaier.Sampling.Tests.PoissonDiskSampling3DTests.PoissonDiskSampling3D_Sample_SamplesHaveMinimalSpacing
-      resultStatus: 1
-      duration: 0.0929741
-      messages: 
-      output: 
-      stacktrace: 
-      notRunnable: 0
-      ignoredOrSkipped: 0
-      description: 
-      isSuite: 0
-      categories:
-      - Uncategorized
-      parentId: 1005
-      parentUniqueId: SBaier.Sampling.Tests.dll/SBaier/Sampling/Tests/[SBaier.Sampling.Tests][SBaier.Sampling.Tests.PoissonDiskSampling3DTests][suite]
-    - id: 1013
-      uniqueId: SBaier.Sampling.Tests.dll/SBaier/Sampling/Tests/PoissonDiskSampling3DTests/[SBaier.Sampling.Tests][SBaier.Sampling.Tests.PoissonDiskSampling3DTests.PoissonDiskSampling3D_Sample_UnreachableAmountCausesException]
-      name: PoissonDiskSampling3D_Sample_UnreachableAmountCausesException
-      fullName: SBaier.Sampling.Tests.PoissonDiskSampling3DTests.PoissonDiskSampling3D_Sample_UnreachableAmountCausesException
-      resultStatus: 1
-      duration: 0.0430366
-      messages: 
-      output: 
-      stacktrace: 
-      notRunnable: 0
-      ignoredOrSkipped: 0
-      description: 
-      isSuite: 0
-      categories:
-      - Uncategorized
-      parentId: 1005
-      parentUniqueId: SBaier.Sampling.Tests.dll/SBaier/Sampling/Tests/[SBaier.Sampling.Tests][SBaier.Sampling.Tests.PoissonDiskSampling3DTests][suite]
-    m_ResultText: PoissonDiskSampling3D_Sample_UnreachableAmountCausesException (0,043s)
+    m_ResultText: PoissonDiskSampling3DParameterValidatorTests (0,041s)
     m_ResultStacktrace: 
     m_TestListState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 2c77ff45
-      m_LastClickedID: 1174370092
-      m_ExpandedIDs: 3b881387dd587bacb2689bc31e8735c87c6afd0bc11d5623ffffff7f
+      m_SelectedIDs: d08a84e9
+      m_LastClickedID: -377189680
+      m_ExpandedIDs: 3b881387dd587bacb2689bc31e8735c8d08a84e97c6afd0bc11d5623ffffff7f
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -696,9 +746,9 @@ MonoBehaviour:
   m_Pos:
     serializedVersion: 2
     x: 0
-    y: 847.3334
-    width: 1953.6666
-    height: 511.6667
+    y: 846.6667
+    width: 1954
+    height: 512
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
     m_LastAppliedPresetName: Default
@@ -720,18 +770,18 @@ MonoBehaviour:
     m_Globs: []
     m_OriginalText: 
   m_ViewMode: 1
-  m_StartGridSize: 64
+  m_StartGridSize: 16
   m_LastFolders:
   - Assets/Examples
-  m_LastFoldersGridSize: -1
+  m_LastFoldersGridSize: 16
   m_LastProjectPath: D:\6_Projekte\unity-sampling\Unity Sampling
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: d4570000
-    m_LastClickedID: 22484
-    m_ExpandedIDs: 00000000ba57000000ca9a3bffffff7f
+    m_SelectedIDs: e2580000
+    m_LastClickedID: 22754
+    m_ExpandedIDs: 00000000c8580000e4580000e658000000ca9a3bffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -759,7 +809,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 
+    m_ExpandedIDs: 00000000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -784,26 +834,26 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_ListAreaState:
-    m_SelectedInstanceIDs: b6590000
-    m_LastClickedInstanceID: 22966
+    m_SelectedInstanceIDs: b45a0000
+    m_LastClickedInstanceID: 23220
     m_HadKeyboardFocusLastEvent: 1
     m_ExpandedInstanceIDs: c6230000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
-      m_Name: 
-      m_OriginalName: 
+      m_Name: Validation
+      m_OriginalName: Validation
       m_EditFieldRect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 0
         height: 0
-      m_UserData: 0
+      m_UserData: 22952
       m_IsWaitingForDelay: 0
       m_IsRenaming: 0
-      m_OriginalEventType: 11
+      m_OriginalEventType: 0
       m_IsRenamingFilename: 1
-      m_ClientGUIView: {fileID: 0}
+      m_ClientGUIView: {fileID: 6}
     m_CreateAssetUtility:
       m_EndAction: {fileID: 0}
       m_InstanceID: 0
@@ -812,7 +862,7 @@ MonoBehaviour:
       m_ResourceFile: 
     m_NewAssetIndexInList: -1
     m_ScrollPosition: {x: 0, y: 0}
-    m_GridSize: 64
+    m_GridSize: 16
   m_SkipHiddenPackages: 0
   m_DirectoriesAreaWidth: 207
 --- !u!114 &15
@@ -835,10 +885,10 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 1954.6667
+    x: 1955.3334
     y: 72.66667
-    width: 604.3334
-    height: 1286.3334
+    width: 604
+    height: 1286
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
     m_LastAppliedPresetName: Default
@@ -878,8 +928,8 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 72.66667
-    width: 494.33334
-    height: 753.6667
+    width: 494
+    height: 753
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
     m_LastAppliedPresetName: Default
@@ -887,9 +937,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 
-      m_LastClickedID: 0
-      m_ExpandedIDs: fef2ffff46f3ffffbcf4fffff6f4ffff3ef5ffff7cf6ffff52f7ffff9af7ffff16f9ffff34fbffffb6590000
+      m_SelectedIDs: b45a0000
+      m_LastClickedID: 23220
+      m_ExpandedIDs: 00c0ffff5ac0ffff3cc2ffff58cbffffa6cbffff44cdffff18d9ffff66d9ffffe0daffff36fbffffc05a0000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -935,8 +985,8 @@ MonoBehaviour:
     serializedVersion: 2
     x: 495.33334
     y: 72.66667
-    width: 793.33325
-    height: 753.6667
+    width: 793
+    height: 753
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
     m_LastAppliedPresetName: Default
@@ -1138,9 +1188,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 4.125065, y: 2.5871892, z: 3.4430513}
+    m_Target: {x: 4.7627463, y: 6.97545, z: 4.0162454}
     speed: 2
-    m_Value: {x: 4.125065, y: 2.5871892, z: 3.4430513}
+    m_Value: {x: 4.7627463, y: 6.97545, z: 4.0162454}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -1187,13 +1237,13 @@ MonoBehaviour:
     m_GridAxis: 1
     m_gridOpacity: 0.5
   m_Rotation:
-    m_Target: {x: 0.057205856, y: -0.9277107, z: 0.16223502, w: 0.33256432}
+    m_Target: {x: 0.08146623, y: -0.9116721, z: 0.22373632, w: 0.33616576}
     speed: 2
-    m_Value: {x: 0.05693856, y: -0.92781943, z: 0.1622526, w: 0.33103356}
+    m_Value: {x: 0.0814317, y: -0.9112857, z: 0.22364148, w: 0.33602327}
   m_Size:
-    m_Target: 8.811131
+    m_Target: 16.378313
     speed: 2
-    m_Value: 8.811131
+    m_Value: 16.378313
   m_Ortho:
     m_Target: 0
     speed: 2
@@ -1238,10 +1288,10 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 1290.6667
+    x: 1290
     y: 72.66667
-    width: 662
-    height: 753.6667
+    width: 663
+    height: 753
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
     m_LastAppliedPresetName: Default
@@ -1252,7 +1302,7 @@ MonoBehaviour:
   m_ShowGizmos: 0
   m_TargetDisplay: 0
   m_ClearColor: {r: 0, g: 0, b: 0, a: 0}
-  m_TargetSize: {x: 662, y: 732.6667}
+  m_TargetSize: {x: 663, y: 732}
   m_TextureFilterMode: 0
   m_TextureHideFlags: 61
   m_RenderIMGUI: 1
@@ -1267,10 +1317,10 @@ MonoBehaviour:
     m_VRangeLocked: 0
     hZoomLockedByDefault: 0
     vZoomLockedByDefault: 0
-    m_HBaseRangeMin: -220.66667
-    m_HBaseRangeMax: 220.66667
-    m_VBaseRangeMin: -244.22223
-    m_VBaseRangeMax: 244.22223
+    m_HBaseRangeMin: -221
+    m_HBaseRangeMax: 221
+    m_VBaseRangeMin: -244
+    m_VBaseRangeMax: 244
     m_HAllowExceedBaseRangeMin: 1
     m_HAllowExceedBaseRangeMax: 1
     m_VAllowExceedBaseRangeMin: 1
@@ -1288,23 +1338,23 @@ MonoBehaviour:
       serializedVersion: 2
       x: 0
       y: 21
-      width: 662
-      height: 732.6667
+      width: 663
+      height: 732
     m_Scale: {x: 1, y: 1}
-    m_Translation: {x: 331, y: 366.33334}
+    m_Translation: {x: 331.5, y: 366}
     m_MarginLeft: 0
     m_MarginRight: 0
     m_MarginTop: 0
     m_MarginBottom: 0
     m_LastShownAreaInsideMargins:
       serializedVersion: 2
-      x: -331
-      y: -366.33334
-      width: 662
-      height: 732.6667
+      x: -331.5
+      y: -366
+      width: 663
+      height: 732
     m_MinimalGUI: 1
   m_defaultScale: 1
-  m_LastWindowPixelSize: {x: 993, y: 1130.5}
+  m_LastWindowPixelSize: {x: 994.5, y: 1129.5}
   m_ClearInEditMode: 1
   m_NoCameraWarning: 1
   m_LowResolutionForAspectRatios: 01000000000000000000
@@ -1331,9 +1381,9 @@ MonoBehaviour:
   m_Pos:
     serializedVersion: 2
     x: 0
-    y: 847.3334
-    width: 1953.6666
-    height: 511.6667
+    y: 846.6667
+    width: 1954
+    height: 512
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
     m_LastAppliedPresetName: Default

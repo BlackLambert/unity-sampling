@@ -152,14 +152,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 31d436d310cb9ce4892c4a277cfb3557, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _samplesAmount: 150
-  _bounds: {x: 10, y: 10, z: 10}
+  _samplesAmount: 500
+  _bounds: {x: 20, y: 20, z: 20}
+  _startPosition: {x: 1, y: 1, z: 1}
   _minimalDistance: 1.5
-  _maximalDistance: 2.25
+  _maximalDistance: 2
   _sampleObject: {fileID: 6292773635095354086, guid: f1bded7f4e1b5184990ee03c7618d2cd, type: 3}
   _connectionObject: {fileID: 7177061470562023560, guid: 8ed731c8bafbbc44fa3ad1b62ff4792c, type: 3}
-  _retries: 10
-  _seed: 6
+  _retries: 4
+  _seed: 1000
   _secondsTillSeedIncrease: 2
 --- !u!4 &214029763
 Transform:
@@ -168,7 +169,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 214029761}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -305,8 +306,8 @@ Camera:
   m_GameObject: {fileID: 963194225}
   m_Enabled: 1
   serializedVersion: 2
-  m_ClearFlags: 1
-  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
+  m_ClearFlags: 2
+  m_BackGroundColor: {r: 0, g: 0, b: 0, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
@@ -347,7 +348,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963194225}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 5, y: 5, z: -12.23}
+  m_LocalPosition: {x: 10, y: 10, z: -20}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

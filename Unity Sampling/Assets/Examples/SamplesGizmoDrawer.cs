@@ -11,6 +11,8 @@ namespace SBaier.Sampling.Examples
         [SerializeField]
         private Vector3 _bounds = new Vector3(10, 10, 10);
         [SerializeField]
+        private Vector3 _startPosition = new Vector3(1, 1, 1);
+        [SerializeField]
         private float _minimalDistance = 0.5f;
         [SerializeField]
         private float _maximalDistance = 0.7f;
@@ -57,7 +59,7 @@ namespace SBaier.Sampling.Examples
         private void CreateSamples()
 		{
             _samples = new PoissonDiskSampling3D(new System.Random(_seed), _retries, new PoissonDiskSampling3DParameterValidator()).
-                Sample(new PoissonDiskSampling3D.Parameters(_samplesAmount, _minimalDistance, _bounds, _bounds / 2));
+                Sample(new PoissonDiskSampling3D.Parameters(_samplesAmount, _minimalDistance, _bounds, _startPosition));
             foreach (Vector3 sample in _samples)
             {
                 _sampleObjects.Add(Instantiate(_sampleObject, sample, Quaternion.identity, transform));
