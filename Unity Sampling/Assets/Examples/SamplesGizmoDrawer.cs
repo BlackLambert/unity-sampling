@@ -43,7 +43,6 @@ namespace SBaier.Sampling.Examples
 
         private void Recreate()
 		{
-            Debug.Log("Recreate");
             _seed++;
             Clear();
             Create();
@@ -57,7 +56,8 @@ namespace SBaier.Sampling.Examples
 
         private void CreateSamples()
 		{
-            _samples = new PoissonDiskSampling3D(new System.Random(_seed), _retries).Sample(new PoissonDiskSampling3D.Parameters(_samplesAmount, _minimalDistance, _bounds, _bounds / 2));
+            _samples = new PoissonDiskSampling3D(new System.Random(_seed), _retries, new PoissonDiskSampling3DParameterValidator()).
+                Sample(new PoissonDiskSampling3D.Parameters(_samplesAmount, _minimalDistance, _bounds, _bounds / 2));
             foreach (Vector3 sample in _samples)
             {
                 _sampleObjects.Add(Instantiate(_sampleObject, sample, Quaternion.identity, transform));

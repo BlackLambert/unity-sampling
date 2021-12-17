@@ -1,3 +1,14 @@
 {
-	"name": "SBaier.Sampling"
+    "name": "SBaier.Sampling",
+    "rootNamespace": "SBaier.Sampling",
+    "references": [],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
 }

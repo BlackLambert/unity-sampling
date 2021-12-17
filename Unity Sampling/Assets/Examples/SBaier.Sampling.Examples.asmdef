@@ -1,6 +1,6 @@
 {
     "name": "SBaier.Sampling.Examples",
-    "rootNamespace": "",
+    "rootNamespace": "SBaier.Sampling.Examples",
     "references": [
         "GUID:7125283ed6fe01c4d8c35e6223b50d7e"
     ],

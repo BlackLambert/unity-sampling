@@ -16,12 +16,15 @@ namespace SBaier.Sampling
 		private int _currentIndex;
 		private int _maxSamplingRetries;
 		private Vector3 _startPosition;
+		private Validator<Parameters> _parametersValidator;
 
 		public PoissonDiskSampling3D(System.Random random,
-			int maxSamplingRetries)
+			int maxSamplingRetries,
+			Validator<Parameters> parametersValidator)
 		{
 			_random = random;
 			_maxSamplingRetries = maxSamplingRetries;
+			_parametersValidator = parametersValidator;
 		}
 
 		public List<Vector3> Sample(Parameters parameters)
@@ -39,17 +42,9 @@ namespace SBaier.Sampling
 
 		private void Init(Parameters parameters)
 		{
-			Validate(parameters);
+			_parametersValidator.Validate(parameters);
 			Reset();
 			InitParameterFields(parameters);
-		}
-
-		private void Validate(Parameters parameters)
-		{
-			ValidateAmount(parameters.Amount);
-			ValidateMinDistance(parameters.MinDistance);
-			ValidateBounds(parameters.Bounds);
-			ValidateStartPosition(parameters.Bounds, parameters.StartPosition);
 		}
 
 		private void Reset()
@@ -66,33 +61,6 @@ namespace SBaier.Sampling
 			_amount = parameters.Amount;
 			_startPosition = parameters.StartPosition;
 
-		}
-
-		private void ValidateAmount(int amount)
-		{
-			if (amount <= 0)
-				throw new InvalidAmountException();
-		}
-
-		private void ValidateMinDistance(float minDistance)
-		{
-			if (minDistance < 0)
-				throw new InvalidMinDistanceException();
-		}
-
-		private void ValidateBounds(Vector3 bounds)
-		{
-			if (bounds.x < 0 ||
-				bounds.y < 0 ||
-				bounds.z < 0)
-				throw new InvalidBoundsException();
-		}
-
-		private void ValidateStartPosition(Vector3 bounds, Vector3 startPos)
-		{
-			Bounds boundsObject = new Bounds(bounds / 2, bounds);
-			if (!boundsObject.Contains(startPos))
-				throw new InvalidStartPositionException();
 		}
 
 		private Vector3 CreateSample()
@@ -180,10 +148,7 @@ namespace SBaier.Sampling
 			public Vector3 StartPosition { get; }
 		}
 
-		public class InvalidAmountException : ArgumentException { }
-		public class InvalidMinDistanceException : ArgumentException { }
-		public class InvalidBoundsException : ArgumentException { }
-		public class InvalidStartPositionException : ArgumentException { }
+		
 		public class SamplingException : ArgumentException 
 		{
 			public SamplingException() : base("Sampling failed. Please increase the amount of retries, " +
