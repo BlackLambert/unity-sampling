@@ -8,21 +8,16 @@ namespace SBaier.Sampling.Tests
 {
     public class PoissonDiskSampling3DTests
     {
-		private const int _retries = 50;
+		private const int _tries = 50;
 
 		private const float _epsilon = 0.01f;
 		private const int _highAmount = 500;
+		private const float _outOfBoundsChance = 0.25f;
+		private const int _fullOutOfBoundsChance = 1;
 		private readonly int[] _testSeeds = new int[] {0, 42, 123, 2, 1024 };
+		private readonly int[] _invalidTriesAmount = new int[] {-1, -10, -2, -200, 0 };
 		private readonly int[] _testSamplesAmount = new int[] {3, 21, 10, 1, 100 };
 		private readonly float[] _testMinDistance = new float[] { 2, 1.2f, 11f, 2, 25f };
-		private readonly Vector3[] _testBounds = new Vector3[]
-		{
-			new Vector3(10, 20, 5),
-			new Vector3(0.1f, 200, 10),
-			new Vector3(3, 20, 200),
-			new Vector3(0, 0, 0),
-			new Vector3(150, 150, 150)
-		};
 
 		private readonly Vector3[] _testStartPositions = new Vector3[]
 		{
@@ -37,6 +32,8 @@ namespace SBaier.Sampling.Tests
         private List<Vector3> _samples;
 		Mock<Validator<PoissonDiskSampling3D.Parameters>> _validatorMock;
 		private bool _validateCalled = false;
+		private Mock<Bounds> _boundsMock;
+		private Dictionary<Vector3, bool> _sampleToIsWithinBounds = new Dictionary<Vector3, bool>();
 
 		[Test]
         public void Sample_ResultHasExpectedAmountOfSamples()
@@ -71,7 +68,7 @@ namespace SBaier.Sampling.Tests
 			{
 				GivenADefaultSetup(i);
 				WhenSampleIsCalled(CreateParameters(i));
-				ThenSamplesAreWithinBounds(_testBounds[i]);
+				ThenSamplesAreWithinBounds();
 				TearDown();
 			}
         }
@@ -81,7 +78,7 @@ namespace SBaier.Sampling.Tests
 		{
 			for (int i = 0; i < _testSamplesAmount.Length; i++)
 			{
-				GivenADefaultSetup(i);
+				GivenASetupWithAlwaysOutOfBounds(i);
 				TestDelegate test = () => WhenSampleIsCalled(CreateParametersWithHighAmount(i));
 				ThenThrowsSamplingException(test);
 				TearDown();
@@ -100,9 +97,39 @@ namespace SBaier.Sampling.Tests
 			}
 		}
 
+
+		[Test]
+		public void Constructor_InvalidRetriesThrowException()
+		{
+			for (int i = 0; i < _invalidTriesAmount.Length; i++)
+			{
+				TestDelegate test = () => GivenASetupWithInvalidTriesAmount(i);
+				ThenThrowsInvalidTriesAmountException(test);
+				TearDown();
+			}
+		}
+
 		private void GivenADefaultSetup(int index)
 		{
+			Setup();
 			GivenADefaultValidatorMock();
+			GivenMockedBounds(_outOfBoundsChance);
+			GivenANewPoissonDiskSampling(index);
+		}
+
+		private void GivenASetupWithInvalidTriesAmount(int index)
+		{
+			Setup();
+			GivenADefaultValidatorMock();
+			GivenMockedBounds(_outOfBoundsChance);
+			GivenANewPoissonDiskSamplingWithInvalidTries(index);
+		}
+
+		private void GivenASetupWithAlwaysOutOfBounds(int index)
+		{
+			Setup();
+			GivenADefaultValidatorMock();
+			GivenMockedBounds(_fullOutOfBoundsChance);
 			GivenANewPoissonDiskSampling(index);
 		}
 
@@ -114,8 +141,21 @@ namespace SBaier.Sampling.Tests
 
 		private void GivenANewPoissonDiskSampling(int index)
         {
-            _sampling = new PoissonDiskSampling3D(CreateRandom(index), _retries, _validatorMock.Object);
+            _sampling = new PoissonDiskSampling3D(CreateRandom(index), _tries, _validatorMock.Object);
 		}
+
+		private void GivenANewPoissonDiskSamplingWithInvalidTries(int index)
+        {
+            _sampling = new PoissonDiskSampling3D(CreateRandom(index), _invalidTriesAmount[index], _validatorMock.Object);
+		}
+
+
+		private void GivenMockedBounds(float falseChance)
+		{
+			_boundsMock = new Mock<Bounds>(); 
+			_boundsMock.Setup(b => b.Contains(It.IsAny<Vector3>())).Returns<Vector3>(v => CreateContainsReturnValue(v, falseChance));
+		}
+
 
 		private void WhenSampleIsCalled(PoissonDiskSampling3D.Parameters parameters)
 		{
@@ -143,17 +183,10 @@ namespace SBaier.Sampling.Tests
 		}
 
 
-		private void ThenSamplesAreWithinBounds(Vector3 bounds)
+		private void ThenSamplesAreWithinBounds()
 		{
 			foreach (Vector3 sample in _samples)
-			{
-				Assert.GreaterOrEqual(sample.x, 0);
-				Assert.GreaterOrEqual(sample.y, 0);
-				Assert.GreaterOrEqual(sample.z, 0);
-				Assert.LessOrEqual(sample.x, bounds.x + _epsilon);
-				Assert.LessOrEqual(sample.y, bounds.y + _epsilon);
-				Assert.LessOrEqual(sample.z, bounds.z + _epsilon);
-			}
+				Assert.True(_sampleToIsWithinBounds.ContainsKey(sample) ? _sampleToIsWithinBounds[sample] : true);
 		}
 
 		
@@ -163,9 +196,20 @@ namespace SBaier.Sampling.Tests
 			Assert.Throws<PoissonDiskSampling3D.SamplingException>(test);
 		}
 
+		private void ThenThrowsInvalidTriesAmountException(TestDelegate test)
+		{
+			Assert.Throws<PoissonDiskSampling3D.InvalidTriesAmountException>(test);
+		}
+
 		private void ThenValidateOfTheValidatorIsCalled()
 		{
 			Assert.IsTrue(_validateCalled);
+		}
+
+		[SetUp]
+		public void Setup()
+		{
+			UnityEngine.Random.InitState(0);
 		}
 
 		[TearDown]
@@ -173,6 +217,7 @@ namespace SBaier.Sampling.Tests
 		{
 			_samples = null;
 			_validateCalled = false;
+			_sampleToIsWithinBounds.Clear();
 		}
 
 		private System.Random CreateRandom(int index)
@@ -185,20 +230,24 @@ namespace SBaier.Sampling.Tests
 		{
 			int amount = _testSamplesAmount[index];
 			float minDistance = _testMinDistance[index];
-			Vector3 bounds = _testBounds[index];
 			Vector3 startPos = _testStartPositions[index];
-
-			return new PoissonDiskSampling3D.Parameters(amount, minDistance, bounds, startPos);
+			return new PoissonDiskSampling3D.Parameters(amount, minDistance, _boundsMock.Object, startPos);
 		}
 
 		private PoissonDiskSampling3D.Parameters CreateParametersWithHighAmount(int index)
 		{
 			int amount = _highAmount;
 			float minDistance = _testMinDistance[index];
-			Vector3 bounds = _testBounds[index];
 			Vector3 startPos = _testStartPositions[index];
+			return new PoissonDiskSampling3D.Parameters(amount, minDistance, _boundsMock.Object, startPos);
+		}
 
-			return new PoissonDiskSampling3D.Parameters(amount, minDistance, bounds, startPos);
+
+		private bool CreateContainsReturnValue(Vector3 point, float falseChance)
+		{
+			bool value = UnityEngine.Random.value > falseChance;
+			_sampleToIsWithinBounds[point] = value;
+			return value;
 		}
 	}
 }

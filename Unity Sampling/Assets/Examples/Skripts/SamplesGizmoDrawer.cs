@@ -9,7 +9,7 @@ namespace SBaier.Sampling.Examples
         [SerializeField]
         private int _samplesAmount = 10;
         [SerializeField]
-        private Vector3 _bounds = new Vector3(10, 10, 10);
+        private BoundsSettings _boundsSettings;
         [SerializeField]
         private Vector3 _startPosition = new Vector3(1, 1, 1);
         [SerializeField]
@@ -26,21 +26,44 @@ namespace SBaier.Sampling.Examples
         private int _seed = 0;
         [SerializeField]
         private float _secondsTillSeedIncrease = 2;
+        [SerializeField]
+        private Color _gizmoColor = new Color(1, 0, 0, 0.25f);
 
         private List<Vector3> _samples = new List<Vector3>();
         private List<GameObject> _sampleObjects = new List<GameObject>();
         private List<GameObject> _connections = new List<GameObject>();
+        private Bounds _bounds;
 
         private void Start()
 		{
+            _bounds = _boundsSettings.GetBounds();
             Create();
             InvokeRepeating(nameof(Recreate), _secondsTillSeedIncrease, _secondsTillSeedIncrease);
         }
 
         private void OnDrawGizmos()
         {
-            Gizmos.color = new Color(1, 0, 0, 0.25f);
-            Gizmos.DrawCube(_bounds / 2, _bounds);
+            if (_boundsSettings == null)
+                return;
+
+            Gizmos.color = _gizmoColor;
+            DrawBounds();
+        }
+
+        private void DrawBounds()
+		{
+            Vector3 center = _boundsSettings.GetCenter();
+            switch(_boundsSettings.BoundsType)
+			{
+                case BoundsSettings.Type.Cube:
+                    Gizmos.DrawCube(_boundsSettings.GetCenter(), (_boundsSettings as CubeBoundsSettings).Size);
+                    break;
+                case BoundsSettings.Type.Sphere:
+                    Gizmos.DrawSphere(_boundsSettings.GetCenter(), (_boundsSettings as SphereBoundsSettings).Radius);
+                    break;
+                default:
+                    throw new NotImplementedException();
+			}
         }
 
         private void Recreate()

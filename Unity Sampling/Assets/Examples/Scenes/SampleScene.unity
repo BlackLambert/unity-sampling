@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657874, g: 0.49641258, b: 0.5748172, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -152,16 +152,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 31d436d310cb9ce4892c4a277cfb3557, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _samplesAmount: 500
-  _bounds: {x: 20, y: 20, z: 20}
-  _startPosition: {x: 1, y: 1, z: 1}
-  _minimalDistance: 1.5
-  _maximalDistance: 2
+  _samplesAmount: 120
+  _boundsSettings: {fileID: 11400000, guid: ecba2637582a78e47b2e6730eefdbf41, type: 2}
+  _startPosition: {x: 0, y: 0, z: 0}
+  _minimalDistance: 2
+  _maximalDistance: 2.75
   _sampleObject: {fileID: 6292773635095354086, guid: f1bded7f4e1b5184990ee03c7618d2cd, type: 3}
   _connectionObject: {fileID: 7177061470562023560, guid: 8ed731c8bafbbc44fa3ad1b62ff4792c, type: 3}
-  _retries: 4
+  _retries: 10
   _seed: 1000
   _secondsTillSeedIncrease: 2
+  _gizmoColor: {r: 0, g: 0.45177603, b: 1, a: 0.25}
 --- !u!4 &214029763
 Transform:
   m_ObjectHideFlags: 0
@@ -348,7 +349,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963194225}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 10, y: 10, z: -20}
+  m_LocalPosition: {x: 0, y: 0, z: -30}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

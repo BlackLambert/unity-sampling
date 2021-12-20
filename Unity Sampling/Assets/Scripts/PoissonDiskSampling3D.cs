@@ -9,22 +9,30 @@ namespace SBaier.Sampling
 		private const float _epsilon = 0.0001f;
 		private readonly System.Random _random;
 		private List<int> _openList = new List<int>();
-		private Vector3 _bounds;
+		private Bounds _bounds;
 		private float _minDistance;
 		private int _amount;
 		private List<Vector3> _samples;
 		private int _currentIndex;
-		private int _maxSamplingRetries;
+		private int _maxSamplingTries;
 		private Vector3 _startPosition;
 		private Validator<Parameters> _parametersValidator;
 
 		public PoissonDiskSampling3D(System.Random random,
-			int maxSamplingRetries,
+			int maxSamplingTries,
 			Validator<Parameters> parametersValidator)
 		{
+			ValidateTries(maxSamplingTries);
+
 			_random = random;
-			_maxSamplingRetries = maxSamplingRetries;
+			_maxSamplingTries = maxSamplingTries;
 			_parametersValidator = parametersValidator;
+		}
+
+		private void ValidateTries(int maxSamplingTries)
+		{
+			if (maxSamplingTries <= 0)
+				throw new InvalidTriesAmountException();
 		}
 
 		public List<Vector3> Sample(Parameters parameters)
@@ -77,7 +85,7 @@ namespace SBaier.Sampling
 
 			int randomOpenIndex = _random.Next(_openList.Count);
 			Vector3 openSample = _samples[_openList[randomOpenIndex]];
-			for (int i = 0; i < _maxSamplingRetries; i++)
+			for (int i = 0; i < _maxSamplingTries; i++)
 			{
 				Vector3 point = GetRandomPointAround(openSample);
 				if (IsValid(point))
@@ -105,7 +113,7 @@ namespace SBaier.Sampling
 
 		private bool IsValid(Vector3 point)
 		{
-			return IsWithinBounds(point) &&
+			return _bounds.Contains(point) &&
 				HasMinDistanceToOtherSamples(point);
 		}
 
@@ -119,21 +127,11 @@ namespace SBaier.Sampling
 			return true;
 		}
 
-		private bool IsWithinBounds(Vector3 point)
-		{
-			return point.x <= _bounds.x &&
-				point.y <= _bounds.y &&
-				point.z <= _bounds.z &&
-				point.x >= 0 &&
-				point.y >= 0 &&
-				point.z >= 0;
-		}
-
 		public class Parameters
 		{
 			public Parameters(int amount, 
 				float minDistance, 
-				Vector3 bounds, 
+				Bounds bounds, 
 				Vector3 startPosition)
 			{
 				Amount = amount;
@@ -144,7 +142,7 @@ namespace SBaier.Sampling
 
 			public int Amount { get; }
 			public float MinDistance { get; }
-			public Vector3 Bounds { get; }
+			public Bounds Bounds { get; }
 			public Vector3 StartPosition { get; }
 		}
 
@@ -153,6 +151,12 @@ namespace SBaier.Sampling
 		{
 			public SamplingException() : base("Sampling failed. Please increase the amount of retries, " +
 				"increase the size of the bounds or decrease the samples amount") { }
+		}
+
+		
+		public class InvalidTriesAmountException : ArgumentException 
+		{
+			public InvalidTriesAmountException() : base($"Please provide a valid amount of sampling tries.") { }
 		}
 	}
 }
