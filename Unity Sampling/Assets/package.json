@@ -1,0 +1,21 @@
+{
+  "name": "com.[company-name].[package-name]",
+  "version": "1.0.0",
+  "displayName": "Unity Sampling",
+  "description": "Sampling algorithms implemented for the Unity Game Engine",
+  "unity": "2021.2",
+  "unityRelease": "",
+  "documentationUrl": "https://github.com/BlackLambert/unity-sampling",
+  "changelogUrl": "",
+  "licensesUrl": "",
+  "dependencies": {
+ },
+ "keywords": [
+    "sampling"
+  ],
+  "author": {
+    "name": "Sebastian Baier",
+    "email": "",
+    "url": ""
+  }
+}

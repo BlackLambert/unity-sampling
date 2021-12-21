@@ -86,7 +86,7 @@ MonoBehaviour:
     m_HSlider: 0
     m_VSlider: 0
     m_IgnoreScrollWheelUntilClicked: 0
-    m_EnableMouseInput: 0
+    m_EnableMouseInput: 1
     m_EnableSliderZoomHorizontal: 0
     m_EnableSliderZoomVertical: 0
     m_UniformScale: 1
@@ -225,9 +225,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 90570000
-      m_LastClickedID: 22416
-      m_ExpandedIDs: 3afbffff
+      m_SelectedIDs: 
+      m_LastClickedID: 0
+      m_ExpandedIDs: 4ca0f6ff9aa0f6ff78a2f6ffa8aaf6fff6aaf6ffe8acf6ff36b7f6ff84b7f6ff66b9f6ff3afbffff
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -676,22 +676,22 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Examples/Settings
+    - Assets/App
     m_Globs: []
     m_OriginalText: 
   m_ViewMode: 1
   m_StartGridSize: 16
   m_LastFolders:
-  - Assets/Examples/Settings
+  - Assets/App
   m_LastFoldersGridSize: 16
   m_LastProjectPath: D:\Projects\unity-sampling\Unity Sampling
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 1c580000
-    m_LastClickedID: 22556
-    m_ExpandedIDs: 00000000ec570000f457000000ca9a3bffffff7f
+    m_SelectedIDs: 5c5a0000
+    m_LastClickedID: 23132
+    m_ExpandedIDs: 00000000ec570000f45700005c5a00006a5a000000ca9a3bffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -744,9 +744,9 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_ListAreaState:
-    m_SelectedInstanceIDs: 90570000
-    m_LastClickedInstanceID: 22416
-    m_HadKeyboardFocusLastEvent: 0
+    m_SelectedInstanceIDs: 
+    m_LastClickedInstanceID: 0
+    m_HadKeyboardFocusLastEvent: 1
     m_ExpandedInstanceIDs: c6230000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -796,9 +796,9 @@ MonoBehaviour:
   m_Pos:
     serializedVersion: 2
     x: 0
-    y: 506.4
-    width: 1172
-    height: 277
+    y: 507.2
+    width: 1171.8
+    height: 276.4
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
     m_LastAppliedPresetName: Default
@@ -813,7 +813,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 1
   m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: InspectorWindow
+  m_Name: TestRunnerWindow
   m_EditorClassIdentifier: 
   m_Children: []
   m_Position:
@@ -822,14 +822,14 @@ MonoBehaviour:
     y: 0
     width: 363.19995
     height: 731
-  m_MinSize: {x: 275, y: 50}
+  m_MinSize: {x: 100, y: 100}
   m_MaxSize: {x: 4000, y: 4000}
-  m_ActualView: {fileID: 14}
+  m_ActualView: {fileID: 15}
   m_Panes:
   - {fileID: 14}
   - {fileID: 15}
-  m_Selected: 0
-  m_LastSelected: 1
+  m_Selected: 1
+  m_LastSelected: 0
 --- !u!114 &14
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -893,14 +893,14 @@ MonoBehaviour:
     serializedVersion: 2
     x: 1172.8
     y: 73.6
-    width: 362
+    width: 362.19995
     height: 710
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
     m_LastAppliedPresetName: Default
     m_SaveData: []
   m_Spl:
-    ID: 137
+    ID: 1235
     splitterInitialOffset: 0
     currentActiveSplitter: -1
     realSizes:
@@ -932,7 +932,7 @@ MonoBehaviour:
       name: Unity Sampling
       fullName: Unity Sampling
       resultStatus: 1
-      duration: 0.8464755
+      duration: 1.0128781
       messages: 
       output: 
       stacktrace: 
@@ -948,7 +948,7 @@ MonoBehaviour:
       name: SBaier.Sampling.Tests.dll
       fullName: D:/Projects/unity-sampling/Unity Sampling/Library/ScriptAssemblies/SBaier.Sampling.Tests.dll
       resultStatus: 1
-      duration: 0.4602946
+      duration: 0.8096929
       messages: 
       output: 
       stacktrace: 
@@ -964,7 +964,7 @@ MonoBehaviour:
       name: SBaier
       fullName: SBaier
       resultStatus: 1
-      duration: 0.4384318
+      duration: 0.7924585
       messages: 
       output: 
       stacktrace: 
@@ -980,7 +980,7 @@ MonoBehaviour:
       name: Sampling
       fullName: SBaier.Sampling
       resultStatus: 1
-      duration: 0.4267352
+      duration: 0.7806605
       messages: 
       output: 
       stacktrace: 
@@ -996,7 +996,7 @@ MonoBehaviour:
       name: Tests
       fullName: SBaier.Sampling.Tests
       resultStatus: 1
-      duration: 0.4101886
+      duration: 0.767866
       messages: 
       output: 
       stacktrace: 
@@ -1012,7 +1012,7 @@ MonoBehaviour:
       name: CubeBoundsTest
       fullName: SBaier.Sampling.Tests.CubeBoundsTest
       resultStatus: 1
-      duration: 0.0822456
+      duration: 0.0925804
       messages: 
       output: 
       stacktrace: 
@@ -1023,12 +1023,29 @@ MonoBehaviour:
       categories: []
       parentId: 1024
       parentUniqueId: SBaier.Sampling.Tests.dll/SBaier/Sampling/[SBaier.Sampling.Tests][SBaier.Sampling.Tests][suite]
+    - id: 1005
+      uniqueId: SBaier.Sampling.Tests.dll/SBaier/Sampling/Tests/CubeBoundsTest/[SBaier.Sampling.Tests][SBaier.Sampling.Tests.CubeBoundsTest.Constructor_InvalidBoundsThrowException]
+      name: Constructor_InvalidBoundsThrowException
+      fullName: SBaier.Sampling.Tests.CubeBoundsTest.Constructor_InvalidBoundsThrowException
+      resultStatus: 1
+      duration: 0.0326168
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1001
+      parentUniqueId: SBaier.Sampling.Tests.dll/SBaier/Sampling/Tests/[SBaier.Sampling.Tests][SBaier.Sampling.Tests.CubeBoundsTest][suite]
     - id: 1003
       uniqueId: SBaier.Sampling.Tests.dll/SBaier/Sampling/Tests/CubeBoundsTest/[SBaier.Sampling.Tests][SBaier.Sampling.Tests.CubeBoundsTest.Contains_ReturnsFalseOnPointOutside]
       name: Contains_ReturnsFalseOnPointOutside
       fullName: SBaier.Sampling.Tests.CubeBoundsTest.Contains_ReturnsFalseOnPointOutside
       resultStatus: 1
-      duration: 0.0427012
+      duration: 0.0149693
       messages: 
       output: 
       stacktrace: 
@@ -1045,7 +1062,7 @@ MonoBehaviour:
       name: Contains_ReturnsTrueOnPointInside
       fullName: SBaier.Sampling.Tests.CubeBoundsTest.Contains_ReturnsTrueOnPointInside
       resultStatus: 1
-      duration: 0.0014452
+      duration: 0.0010331
       messages: 
       output: 
       stacktrace: 
@@ -1062,7 +1079,7 @@ MonoBehaviour:
       name: ToString_ContainsExpectedInformation
       fullName: SBaier.Sampling.Tests.CubeBoundsTest.ToString_ContainsExpectedInformation
       resultStatus: 1
-      duration: 0.0015363
+      duration: 0.0015573
       messages: 
       output: 
       stacktrace: 
@@ -1079,7 +1096,7 @@ MonoBehaviour:
       name: PoissonDiskSampling3DParameterValidatorTests
       fullName: SBaier.Sampling.Tests.PoissonDiskSampling3DParameterValidatorTests
       resultStatus: 1
-      duration: 0.3991238
+      duration: 0.3388344
       messages: 
       output: 
       stacktrace: 
@@ -1095,7 +1112,7 @@ MonoBehaviour:
       name: Validate_InvalidStartPositionThrowsException
       fullName: SBaier.Sampling.Tests.PoissonDiskSampling3DParameterValidatorTests.Validate_InvalidStartPositionThrowsException
       resultStatus: 1
-      duration: 0.3556333
+      duration: 0.2955029
       messages: 
       output: 
       stacktrace: 
@@ -1112,7 +1129,7 @@ MonoBehaviour:
       name: Validate_NegativeAmountThrowsException
       fullName: SBaier.Sampling.Tests.PoissonDiskSampling3DParameterValidatorTests.Validate_NegativeAmountThrowsException
       resultStatus: 1
-      duration: 0.0063103
+      duration: 0.0065802
       messages: 
       output: 
       stacktrace: 
@@ -1129,7 +1146,7 @@ MonoBehaviour:
       name: Validate_NegativeMinDistanceThrowsException
       fullName: SBaier.Sampling.Tests.PoissonDiskSampling3DParameterValidatorTests.Validate_NegativeMinDistanceThrowsException
       resultStatus: 1
-      duration: 0.0055133
+      duration: 0.007766
       messages: 
       output: 
       stacktrace: 
@@ -1146,7 +1163,7 @@ MonoBehaviour:
       name: Validate_NoExceptionOnValidParameters
       fullName: SBaier.Sampling.Tests.PoissonDiskSampling3DParameterValidatorTests.Validate_NoExceptionOnValidParameters
       resultStatus: 1
-      duration: 0.0034113
+      duration: 0.0026796
       messages: 
       output: 
       stacktrace: 
@@ -1163,7 +1180,7 @@ MonoBehaviour:
       name: PoissonDiskSampling3DTests
       fullName: SBaier.Sampling.Tests.PoissonDiskSampling3DTests
       resultStatus: 1
-      duration: 0.3952397
+      duration: 0.3072999
       messages: 
       output: 
       stacktrace: 
@@ -1179,7 +1196,7 @@ MonoBehaviour:
       name: Constructor_InvalidRetriesThrowException
       fullName: SBaier.Sampling.Tests.PoissonDiskSampling3DTests.Constructor_InvalidRetriesThrowException
       resultStatus: 1
-      duration: 0.0212993
+      duration: 0.0292858
       messages: 
       output: 
       stacktrace: 
@@ -1196,7 +1213,7 @@ MonoBehaviour:
       name: Sample_ResultHasExpectedAmountOfSamples
       fullName: SBaier.Sampling.Tests.PoissonDiskSampling3DTests.Sample_ResultHasExpectedAmountOfSamples
       resultStatus: 1
-      duration: 0.0468665
+      duration: 0.0398085
       messages: 
       output: 
       stacktrace: 
@@ -1213,7 +1230,7 @@ MonoBehaviour:
       name: Sample_SamplesAreInBounds
       fullName: SBaier.Sampling.Tests.PoissonDiskSampling3DTests.Sample_SamplesAreInBounds
       resultStatus: 1
-      duration: 0.4007163
+      duration: 0.0317602
       messages: 
       output: 
       stacktrace: 
@@ -1230,7 +1247,7 @@ MonoBehaviour:
       name: Sample_SamplesHaveMinimalSpacing
       fullName: SBaier.Sampling.Tests.PoissonDiskSampling3DTests.Sample_SamplesHaveMinimalSpacing
       resultStatus: 1
-      duration: 0.1913676
+      duration: 0.1364079
       messages: 
       output: 
       stacktrace: 
@@ -1247,7 +1264,7 @@ MonoBehaviour:
       name: Sample_UnreachableAmountCausesException
       fullName: SBaier.Sampling.Tests.PoissonDiskSampling3DTests.Sample_UnreachableAmountCausesException
       resultStatus: 1
-      duration: 0.3521661
+      duration: 0.0179335
       messages: 
       output: 
       stacktrace: 
@@ -1264,7 +1281,7 @@ MonoBehaviour:
       name: Sample_ValidateIsCalled
       fullName: SBaier.Sampling.Tests.PoissonDiskSampling3DTests.Sample_ValidateIsCalled
       resultStatus: 1
-      duration: 0.0179996
+      duration: 0.0268562
       messages: 
       output: 
       stacktrace: 
@@ -1281,7 +1298,7 @@ MonoBehaviour:
       name: SphereBoundsTest
       fullName: SBaier.Sampling.Tests.SphereBoundsTest
       resultStatus: 1
-      duration: 0.0157719
+      duration: 0.0146199
       messages: 
       output: 
       stacktrace: 
@@ -1292,12 +1309,29 @@ MonoBehaviour:
       categories: []
       parentId: 1024
       parentUniqueId: SBaier.Sampling.Tests.dll/SBaier/Sampling/[SBaier.Sampling.Tests][SBaier.Sampling.Tests][suite]
+    - id: 1010
+      uniqueId: SBaier.Sampling.Tests.dll/SBaier/Sampling/Tests/SphereBoundsTest/[SBaier.Sampling.Tests][SBaier.Sampling.Tests.SphereBoundsTest.Constructor_InvalidBoundsThrowException]
+      name: Constructor_InvalidBoundsThrowException
+      fullName: SBaier.Sampling.Tests.SphereBoundsTest.Constructor_InvalidBoundsThrowException
+      resultStatus: 1
+      duration: 0.0008687
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1006
+      parentUniqueId: SBaier.Sampling.Tests.dll/SBaier/Sampling/Tests/[SBaier.Sampling.Tests][SBaier.Sampling.Tests.SphereBoundsTest][suite]
     - id: 1007
       uniqueId: SBaier.Sampling.Tests.dll/SBaier/Sampling/Tests/SphereBoundsTest/[SBaier.Sampling.Tests][SBaier.Sampling.Tests.SphereBoundsTest.Contains_ReturnsFalseOnPointOutside]
       name: Contains_ReturnsFalseOnPointOutside
       fullName: SBaier.Sampling.Tests.SphereBoundsTest.Contains_ReturnsFalseOnPointOutside
       resultStatus: 1
-      duration: 0.0030721
+      duration: 0.0020453
       messages: 
       output: 
       stacktrace: 
@@ -1314,7 +1348,7 @@ MonoBehaviour:
       name: Contains_ReturnsTrueOnPointInside
       fullName: SBaier.Sampling.Tests.SphereBoundsTest.Contains_ReturnsTrueOnPointInside
       resultStatus: 1
-      duration: 0.0014992
+      duration: 0.0009236
       messages: 
       output: 
       stacktrace: 
@@ -1331,7 +1365,7 @@ MonoBehaviour:
       name: ToString_ContainsExpectedInformation
       fullName: SBaier.Sampling.Tests.SphereBoundsTest.ToString_ContainsExpectedInformation
       resultStatus: 1
-      duration: 0.0009902
+      duration: 0.0007755
       messages: 
       output: 
       stacktrace: 
@@ -1343,12 +1377,12 @@ MonoBehaviour:
       - Uncategorized
       parentId: 1005
       parentUniqueId: SBaier.Sampling.Tests.dll/SBaier/Sampling/Tests/[SBaier.Sampling.Tests][SBaier.Sampling.Tests.SphereBoundsTest][suite]
-    m_ResultText: Sample_UnreachableAmountCausesException (0,352s)
+    m_ResultText: Constructor_InvalidBoundsThrowException (0,001s)
     m_ResultStacktrace: 
     m_TestListState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 9d55eb61
-      m_LastClickedID: 1642812829
+      m_SelectedIDs: 5b1c73f2
+      m_LastClickedID: -227337125
       m_ExpandedIDs: 3b881387dd587bacb2689bc31e8735c8a013b6e2d08a84e97c6afd0bc11d5623e806ee7cffffff7f
       m_RenameOverlay:
         m_UserAcceptedRename: 0
