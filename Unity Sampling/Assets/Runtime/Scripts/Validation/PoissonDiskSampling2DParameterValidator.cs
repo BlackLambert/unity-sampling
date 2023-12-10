@@ -3,9 +3,9 @@ using UnityEngine;
 
 namespace SBaier.Sampling
 {
-	public class PoissonDiskSampling3DParameterValidator : Validator<PoissonDiskSampling3D.Parameters>
+	public class PoissonDiskSampling2DParameterValidator : Validator<PoissonDiskSampling2D.Parameters>
 	{
-		public void Validate(PoissonDiskSampling3D.Parameters parameters)
+		public void Validate(PoissonDiskSampling2D.Parameters parameters)
 		{
 			ValidateAmount(parameters.Amount);
 			ValidateMinDistance(parameters.MinDistance);
@@ -24,7 +24,7 @@ namespace SBaier.Sampling
 				throw new InvalidMinDistanceException();
 		}
 
-		private void ValidateStartPosition(Bounds3D bounds, Vector3 startPos)
+		private void ValidateStartPosition(Bounds2D bounds, Vector2 startPos)
 		{
 			if (!bounds.Contains(startPos))
 				throw new InvalidStartPositionException();

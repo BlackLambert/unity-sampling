@@ -62,7 +62,7 @@ namespace SBaier.Sampling.Tests
 
 		protected override int TestValuesAmount => _testSizes.Length;
 
-		protected override Bounds CreateBounds(int index)
+		protected override Bounds3D CreateBounds(int index)
 		{
 			return new CubeBounds(_testStartPositions[index], _testSizes[index]);
 		}
@@ -78,7 +78,7 @@ namespace SBaier.Sampling.Tests
 			Assert.IsTrue(toString.Contains(nameof(CubeBounds)));
 		}
 
-		protected override Bounds CreateInvalidBounds(int index)
+		protected override Bounds3D CreateInvalidBounds(int index)
 		{
 			return new CubeBounds(_testStartPositions[index], _testInvalidSizes[index]);
 		}

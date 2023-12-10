@@ -4,16 +4,15 @@ using UnityEngine;
 
 namespace SBaier.Sampling.Examples
 {
-    public abstract class BoundsSettings : ScriptableObject
+    public abstract class BoundsSettings2D : ScriptableObject
     {
-        public abstract Bounds GetBounds();
-        public abstract Vector3 GetCenter();
+        public abstract Bounds2D GetBounds();
+        public abstract Vector2 GetCenter();
         public abstract Type BoundsType { get; }
 
         public enum Type
-		{
-            Sphere,
-            Cube
-		}
+        {
+            Rectangle
+        }
     }
 }

@@ -5,7 +5,7 @@ using UnityEngine;
 namespace SBaier.Sampling.Examples
 {
 	[CreateAssetMenu(fileName = "CubeBoundsSettings", menuName = "Sampling/Examples/CubeBoundsSettings")]
-	public class CubeBoundsSettings : BoundsSettings
+	public class CubeBoundsSettings : BoundsSettings3D
     {
 
         [SerializeField]
@@ -16,7 +16,7 @@ namespace SBaier.Sampling.Examples
 
 		public override Type BoundsType => Type.Cube;
 
-		public override Bounds GetBounds()
+		public override Bounds3D GetBounds()
 		{
 			return new CubeBounds(_leftFront, _bounds);
 		}

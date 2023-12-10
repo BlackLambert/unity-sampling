@@ -6,7 +6,7 @@ namespace SBaier.Sampling.Tests
 {
     public abstract class BoundsTest
     {
-		private Bounds _bounds;
+		private Bounds3D _bounds;
         private bool _isWithinBounds;
         private Vector3 _testPoint;
 
@@ -79,17 +79,17 @@ namespace SBaier.Sampling.Tests
 
         private void ThenWhithinBoundsIs(bool expected)
         {
-            Assert.AreEqual(expected, _isWithinBounds, $"'{nameof(Bounds.Contains)}' of '{_bounds.ToString()}' returns '{_isWithinBounds}' for '{_testPoint}' when '{expected}' was expected.");
+            Assert.AreEqual(expected, _isWithinBounds, $"'{nameof(Bounds3D.Contains)}' of '{_bounds.ToString()}' returns '{_isWithinBounds}' for '{_testPoint}' when '{expected}' was expected.");
         }
 
         private void ThenThrowsInvalidBoundsException(TestDelegate test)
         {
-            Assert.Throws<Bounds.InvalidBoundsException>(test);
+            Assert.Throws<InvalidBoundsException>(test);
         }
 
 
-        protected abstract Bounds CreateBounds(int index);
-        protected abstract Bounds CreateInvalidBounds(int index);
+        protected abstract Bounds3D CreateBounds(int index);
+        protected abstract Bounds3D CreateInvalidBounds(int index);
         protected abstract Vector3 GetPointInside(int index);
         protected abstract Vector3 GetPointOutside(int index);
         protected abstract int TestValuesAmount { get; }

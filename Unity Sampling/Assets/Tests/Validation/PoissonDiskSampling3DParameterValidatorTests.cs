@@ -32,7 +32,7 @@ namespace SBaier.Sampling.Tests
 		};
 
 		private Validator<PoissonDiskSampling3D.Parameters> _validator;
-		private Mock<Bounds> _boundsMock;
+		private Mock<Bounds3D> _boundsMock;
 
 
 		[Test]
@@ -89,7 +89,7 @@ namespace SBaier.Sampling.Tests
 
 		private void GivenMockedBoundsReturning(bool value)
 		{
-			_boundsMock = new Mock<Bounds>();
+			_boundsMock = new Mock<Bounds3D>();
 			_boundsMock.Setup(b => b.Contains(It.IsAny<Vector3>())).Returns(value);
 		}
 

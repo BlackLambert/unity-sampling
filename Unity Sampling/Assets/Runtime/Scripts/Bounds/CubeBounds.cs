@@ -5,7 +5,7 @@ using UnityEngine;
 
 namespace SBaier.Sampling
 {
-	public class CubeBounds : Bounds
+	public class CubeBounds : Bounds3D
 	{
 		private readonly Vector3 _leftFront;
 		private Vector3 _size;
@@ -20,7 +20,7 @@ namespace SBaier.Sampling
 		private void ValidateSize(Vector3 size)
 		{
 			if (size.x < 0 || size.y < 0 || size.z < 0)
-				throw new Bounds.InvalidBoundsException($"Please provide a positive size value for {nameof(CubeBounds)}.");
+				throw new InvalidBoundsException($"Please provide a positive size value for {nameof(CubeBounds)}.");
 		}
 
 		public bool Contains(Vector3 point)

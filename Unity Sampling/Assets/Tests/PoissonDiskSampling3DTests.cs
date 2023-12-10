@@ -32,7 +32,7 @@ namespace SBaier.Sampling.Tests
         private List<Vector3> _samples;
 		Mock<Validator<PoissonDiskSampling3D.Parameters>> _validatorMock;
 		private bool _validateCalled = false;
-		private Mock<Bounds> _boundsMock;
+		private Mock<Bounds3D> _boundsMock;
 		private Dictionary<Vector3, bool> _sampleToIsWithinBounds = new Dictionary<Vector3, bool>();
 
 		[Test]
@@ -152,7 +152,7 @@ namespace SBaier.Sampling.Tests
 
 		private void GivenMockedBounds(float falseChance)
 		{
-			_boundsMock = new Mock<Bounds>(); 
+			_boundsMock = new Mock<Bounds3D>(); 
 			_boundsMock.Setup(b => b.Contains(It.IsAny<Vector3>())).Returns<Vector3>(v => CreateContainsReturnValue(v, falseChance));
 		}
 

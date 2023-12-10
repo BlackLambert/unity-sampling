@@ -5,7 +5,7 @@ using UnityEngine;
 
 namespace SBaier.Sampling
 {
-	public class SphereBounds : Bounds
+	public class SphereBounds : Bounds3D
 	{
 		private Vector3 _center;
 		private float _radius;
@@ -20,7 +20,7 @@ namespace SBaier.Sampling
 		private void ValidateRadius(float radius)
 		{
 			if (radius < 0)
-				throw new Bounds.InvalidBoundsException($"Please provide a positive radius value for {nameof(SphereBounds)}");
+				throw new InvalidBoundsException($"Please provide a positive radius value for {nameof(SphereBounds)}");
 		}
 
 		public bool Contains(Vector3 point)
